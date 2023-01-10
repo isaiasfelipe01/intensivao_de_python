@@ -1,0 +1,5 @@
+comandos pyautogui
+- pyautogui.click -> clicar
+- pyautogui.write -> escrever
+- pyautogui.press -> pressionar
+- pyautogui.hotkey -> atalho
