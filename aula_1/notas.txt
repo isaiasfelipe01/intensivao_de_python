@@ -1,5 +1,3 @@
-comandos pyautogui
-- pyautogui.click -> clicar
-- pyautogui.write -> escrever
-- pyautogui.press -> pressionar
-- pyautogui.hotkey -> atalho
+Anotações aula_1
+
+Nesta primeira aula, navegamos pelo google drive através do pyautogui para baixar o relatorio de vendas disponibilizado, após isso, baixamos e pedimos pro python somar as vendas e a quantidade de produtos vendidos. Finalizando escrevi uma mensagem com o somatório das vendas em R$ e quantidade de produtos vendidos para enviar por e-mail determinado por mim.
