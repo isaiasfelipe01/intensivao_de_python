@@ -31,7 +31,7 @@ pyautogui.click(x=1673, y=210) # preparando para dowload
 pyautogui.click(x=1460, y=719) # baixando o arquivo
 sleep(5)
 pyautogui.click(x=766, y=562) # selecionando a pasta
-sleep(10)
+sleep(7)
 
 
 # passo 4: Calcular os indicadores
@@ -51,25 +51,25 @@ pyautogui.hotkey('ctrl', 't')
 pyperclip.copy('https://mail.google.com/mail/u/0/#inbox')
 pyautogui.hotkey('ctrl', 'v')
 pyautogui.press('enter')
-sleep(5)
+sleep(3)
 pyautogui.click(x=94, y=219) # escrevendo e-mail
-
-pyautogui.write('boxwater272@gmail.com')
+sleep(7)
+pyautogui.write('test123@gmail.com')
 pyautogui.press('tab')
 pyautogui.press('tab')
-
+sleep(2)
 pyperclip.copy('Relatório de vendas')
 pyautogui.hotkey('ctrl', 'v')
 pyautogui.press('tab')
-
+sleep(2)
 texto = f'''
 Prezados, bom dia
 
-O faturamento de ontem foi: {faturamento:.2f}
+O faturamento de ontem foi: R${faturamento:.2f}
 A quantidade de de produtos foi: {quantidade}
 
 Abraços
-'''
+'''.replace('.', ',')
 pyperclip.copy(texto)
 pyautogui.hotkey('ctrl', 'v')
 
