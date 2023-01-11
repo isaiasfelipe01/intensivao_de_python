@@ -22,7 +22,10 @@ pyautogui.press('enter')
 sleep(4)
 pyautogui.click(x=508, y=350, clicks = 2) # abrindo o aquivo para dowload
 sleep(3)
+
+
 # passo 3: Exportar o relatório 
+
 pyautogui.click(x=500, y=447) # selecionando o arquivo
 pyautogui.click(x=1673, y=210) # preparando para dowload
 pyautogui.click(x=1460, y=719) # baixando o arquivo
@@ -43,3 +46,31 @@ print(quantidade)
 
 
 # passo 5: Enviar um e-mail para a diretoria
+sleep(3)
+pyautogui.hotkey('ctrl', 't')
+pyperclip.copy('https://mail.google.com/mail/u/0/#inbox')
+pyautogui.hotkey('ctrl', 'v')
+pyautogui.press('enter')
+sleep(5)
+pyautogui.click(x=94, y=219) # escrevendo e-mail
+
+pyautogui.write('boxwater272@gmail.com')
+pyautogui.press('tab')
+pyautogui.press('tab')
+
+pyperclip.copy('Relatório de vendas')
+pyautogui.hotkey('ctrl', 'v')
+pyautogui.press('tab')
+
+texto = f'''
+Prezados, bom dia
+
+O faturamento de ontem foi: {faturamento:.2f}
+A quantidade de de produtos foi: {quantidade}
+
+Abraços
+'''
+pyperclip.copy(texto)
+pyautogui.hotkey('ctrl', 'v')
+
+pyautogui.hotkey('ctrl', 'enter')
